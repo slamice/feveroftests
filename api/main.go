@@ -17,20 +17,13 @@ type post struct {
 
 func initDb()
 {
-    db, err := sql.Open("mymysql", "test/xiemengjun/123456")
-    if err != nil {
-        panic(err)
-    }
-    orm := beedb.New(db, "pg")
-
-    sessionArray = append(sessionArray, session)
 }
 
 func main()
 {
     initDb()
     http.HandleFunc("/", handleIndex)
-    http.HandleFunc("/new", handleNewPost)
+    http.HandleFunc("/user/add", handleNewUser)
 
     err := 
 
