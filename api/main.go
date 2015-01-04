@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-    r "github.com/astaxie/beedb"
+    "github.com/op/go-logging"
 )
 
 var sessionArray []*t.Session
@@ -24,7 +24,4 @@ func main()
     initDb()
     http.HandleFunc("/", handleIndex)
     http.HandleFunc("/user/add", handleNewUser)
-
-    err := 
-
 }
